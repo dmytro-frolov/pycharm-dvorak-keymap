@@ -15,8 +15,8 @@ Maybe one day I'll generate bugfixed maps for OSX and the other defaults.  Until
 
 You'll need
  - python (either 2 or 3 should work)
- - beautifulsoup
- - lxml
+ - [beautifulsoup4](https://pypi.python.org/pypi/beautifulsoup4)
+ - maybe also [lxml](http://lxml.de/) if you're on python3
  - an input file to remap
 
 For the default keymaps, look in `<pycharm>/lib/resources.jar/idea/Keymap_*.xml`
