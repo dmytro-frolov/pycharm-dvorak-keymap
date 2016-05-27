@@ -5,7 +5,7 @@ For all you geeks using a Dvorak keyboard layout and a jetbrains IDE (eg. pychar
 
 [There's a very old bug on jetbrains' tracker](https://youtrack.jetbrains.com/issue/IDEA-63779), but they are saying it should be fixed upstream by JDK, which of course will never happen.  So here is a keymap for getting your familiar old shortcuts back.
 
-_Disclaimer_: I have only tested this on Linux / GNOME running PyCharm v5.0.4.  
+I use this on Linux/GNOME under PyCharm v2016.1.4.  
 
 ### Installation
 In your IDE, choose `File -> Import settings...` and select `dvorak_settings.jar`
