@@ -56,7 +56,7 @@ def read_keymap_infile(fname):
 def main(fname, outfname=None):
     soup = read_keymap_infile(fname)
 
-    for node in soup.component.keymap.descendants:
+    for node in soup.keymap.descendants:
         if node.name == 'action':
             action = node.attrs['id']
         if node.name == 'keyboard-shortcut':
@@ -76,20 +76,20 @@ def main(fname, outfname=None):
                 print('Remapping {:35}: {} --> {}'.format(action, shortcut, new_shortcut))
             node.attrs['first-keystroke'] = new_shortcut
 
-    old_name = soup.component.keymap.attrs.get('name')
+    old_name = soup.keymap.attrs.get('name')
     if old_name is not None:
-        soup.component.keymap.attrs['parent'] = old_name
-        soup.component.keymap.attrs['name'] = old_name + ' Dvorak'
+        soup.keymap.attrs['parent'] = old_name
+        soup.keymap.attrs['name'] = old_name + ' Dvorak'
     else:
-        soup.component.keymap.attrs['name'] = 'Keymap Dvorak'
+        soup.keymap.attrs['name'] = 'Keymap Dvorak'
 
     if outfname:
         with open(outfname, 'w') as f:
-            f.write(soup.component.keymap.prettify())
+            f.write(soup.keymap.prettify())
             f.write('\n')
         print('New keymap saved to {}'.format(outfname))
     else:
-        print(soup.component.keymap.prettify())
+        print(soup.keymap.prettify())
 
     return soup
 
