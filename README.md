@@ -15,7 +15,7 @@ Maybe one day I'll generate bugfixed maps for OSX and the other defaults.  Until
 
 You'll need:
  - Python (either 2 or 3, doesn't matter)
- - Requirements: `pip install beautifulsoup4 lxml`
+ - Couple of requirements - `pip install beautifulsoup4 lxml`
  - An input file to remap
 
 For the default keymaps, look in `<pycharm>/lib/resources.jar/idea/Keymap_*.xml`.  In case you didn't know, a .jar file is just a zip!
